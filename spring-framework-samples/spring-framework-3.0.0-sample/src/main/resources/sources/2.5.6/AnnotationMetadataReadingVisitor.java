@@ -16,6 +16,11 @@
 
 package org.springframework.core.type.classreading;
 
+import org.objectweb.asm.AnnotationVisitor;
+import org.objectweb.asm.Type;
+import org.objectweb.asm.commons.EmptyVisitor;
+import org.springframework.core.type.AnnotationMetadata;
+
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Method;
 import java.util.Collection;
@@ -23,12 +28,6 @@ import java.util.HashSet;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Set;
-
-import org.objectweb.asm.AnnotationVisitor;
-import org.objectweb.asm.Type;
-import org.objectweb.asm.commons.EmptyVisitor;
-
-import org.springframework.core.type.AnnotationMetadata;
 
 /**
  * ASM class visitor which looks for the class name and implemented types as
